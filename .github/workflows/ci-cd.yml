@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -29,8 +30,6 @@ jobs:
 
       - name: Package Application
         run: mvn package
-
-      # Deployment step (adjust as needed)
+        
       - name: Deploy (Optional)
         run: echo "Deploy step would go here"
-        # Replace the above line with actual deployment commands or actions
